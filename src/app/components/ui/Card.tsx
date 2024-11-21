@@ -5,7 +5,7 @@ import React from "react";
 import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
 import Link from "next/link";
 
-export function ThreeDCardDemo() {
+export function ThreeDCardDemo({title,desc,src}:{title:string,desc:string,src?:string}) {
   return (
     <CardContainer className="inter-var">
       <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto  h-auto rounded-xl p-6 border  ">
@@ -13,18 +13,18 @@ export function ThreeDCardDemo() {
           translateZ="50"
           className="text-xl font-bold text-neutral-600 dark:text-white"
         >
-          App & Web Development
+          {title}
         </CardItem>
         <CardItem
           as="p"
           translateZ="60"
           className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
         >
-         Building cutting-edge websites and applications tailored to your business needs.
+        {desc}
         </CardItem>
         <CardItem translateZ="100" className="w-full mt-4">
           <img
-            src="https://www.valuecoders.com/blog/wp-content/uploads/2018/06/11-tips-successful-mobile-app-development-businesses-android-ios-4-1.jpg"
+            src={src || 'https://www.valuecoders.com/blog/wp-content/uploads/2018/06/11-tips-successful-mobile-app-development-businesses-android-ios-4-1.jpg'}
             height="1000"
             width="1000"
             className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
@@ -46,7 +46,7 @@ export function ThreeDCardDemo() {
             as="button"
             className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
           >
-            Sign up
+            Get Info
           </CardItem>
         </div>
       </CardBody>

@@ -146,9 +146,7 @@ export default function WhyChooseUs() {
           <p className="text-gray-600 mt-4">
             Let us help you achieve your goals with our tailored solutions.
           </p>
-          <button className="mt-6 px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg shadow transition-all duration-300">
-            Contact Us Now
-          </button>
+          
         </motion.div>
       </div>
     </section>

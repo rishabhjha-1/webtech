@@ -5,20 +5,20 @@ import { motion } from "framer-motion";
 export default function Testimonials() {
   const testimonials = [
     {
-      name: "John Doe",
-      role: "CEO, TechCorp",
+      name: "Prerna Sharma",
+      role: "CEO, Triscalla",
       text: "The team exceeded our expectations and delivered top-quality solutions. Highly recommend!",
       image: "/images/testimonial1.jpg",
     },
     {
-      name: "Jane Smith",
-      role: "Marketing Manager, Brandify",
+      name: "Ravi Rohilla",
+      role: "Marketing Manager, Oxign Labs",
       text: "Their innovative approach and attention to detail were instrumental in our project's success.",
       image: "/images/testimonial2.jpg",
     },
     {
-      name: "Michael Brown",
-      role: "Founder, StartUp X",
+      name: "Arvind Mali",
+      role: "Founder, Academic topper",
       text: "Fantastic experience working with such a talented and professional team!",
       image: "/images/testimonial3.jpg",
     },
@@ -54,11 +54,7 @@ export default function Testimonials() {
               className="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
             >
               <div className="flex items-center mb-4">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="w-12 h-12 rounded-full mr-4"
-                />
+             
                 <div>
                   <h4 className="text-lg font-semibold text-gray-800">
                     {testimonial.name}

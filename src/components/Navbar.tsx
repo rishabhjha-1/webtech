@@ -10,9 +10,7 @@ export default function Navbar() {
   const menuItems = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Clients", href: "/clients" },
-    { name: "Contact", href: "/contact" },
+   
   ];
 
   return (
@@ -21,7 +19,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="text-2xl font-bold text-blue-500">
-            WebTechSolutions
+          CohortTech
           </Link>
 
           {/* Desktop Menu */}

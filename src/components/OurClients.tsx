@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 
 export default function OurClients() {
   const clients = [
-    "/logos/client1.png",
-    "/logos/client2.png",
-    "/logos/client3.png",
-    "/logos/client4.png",
-    "/logos/client5.png",
-    "/logos/client6.png",
+    "https://i.pinimg.com/736x/f3/6d/23/f36d23a2701b38fe7440a3a12c3f4729.jpg",
+    "https://letzkhelo-drab.vercel.app/_next/image?url=%2Fletzkhelo-logo.png&w=128&q=75",
+    "https://www.nexgenbattles.com/logo1.png",
+    "https://media.licdn.com/dms/image/v2/D4D0BAQFWY_aj0EvncA/company-logo_200_200/company-logo_200_200/0/1682073430277?e=1740009600&v=beta&t=0XMq-UXnianzOfzc8W9KHcrIosFytUbduD677otigEA",
+    "https://www.academictopper.com/_next/image?url=%2Flogo.jpg&w=96&q=75",
+  
   ];
 
   return (
@@ -34,15 +34,15 @@ export default function OurClients() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8"
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8"
         >
           {clients.map((logo, index) => (
             <motion.div
               key={index}
               whileHover={{ scale: 1.1 }}
-              className="flex items-center justify-center p-4 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+              className="flex items-center justify-center p-4 bg-gray-500 content-evenly rounded-lg shadow-lg hover:shadow-xl transition-shadow"
             >
-              <img src={'https://letzkhelo-drab.vercel.app/_next/image?url=%2Fletzkhelo-logo.png&w=128&q=75'} alt={`Client ${index + 1}`} className="h-12" />
+              <img src={logo} alt={`Client ${index + 1}`} className="h-12" />
             </motion.div>
           ))}
         </motion.div>

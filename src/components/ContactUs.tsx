@@ -109,7 +109,7 @@ export default function ContactUs() {
                 </div>
                 <div>
                   <h4 className="text-lg font-bold">Email Us</h4>
-                  <p className="text-gray-400">contact@webtechsolutions.com</p>
+                  <p className="text-gray-400">cohorttech@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
@@ -131,7 +131,7 @@ export default function ContactUs() {
                 </div>
                 <div>
                   <h4 className="text-lg font-bold">Call Us</h4>
-                  <p className="text-gray-400">+1 (555) 123-4567</p>
+                  <p className="text-gray-400">+918851840604</p>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
@@ -153,7 +153,7 @@ export default function ContactUs() {
                 </div>
                 <div>
                   <h4 className="text-lg font-bold">Visit Us</h4>
-                  <p className="text-gray-400">123 Main Street, New York, NY</p>
+                  <p className="text-gray-400">Dwarka mor</p>
                 </div>
               </div>
             </div>
