@@ -1,100 +1,175 @@
-import Image from "next/image";
+"use client"
+import { motion } from 'framer-motion';
+import Button from '@/app/components/ui/Button';
+import {ThreeDCardDemo} from '@/app/components/ui/Card';
+import Icon  from '@/app/components/ui/Icon';
+import Container from '@/app/components/ui/Container'
+import {BackgroundBeamsWithCollision} from '@/app/components/ui/background';
+import {BackgroundLines} from '@/app/components/ui/Backgroundlines';
+import {LampContainer} from '@/app/components/ui/LampEffect';
+import ContactUs from '@/components/ContactUs';
+import WhyChooseUs from '@/components/Choose';
+import OurClients from '@/components/OurClients';
+import Testimonials from '@/components/Testimonials';
+
+
+
+
+
+
+
+
+const data = [
+  {
+    order: 1,
+    startLat: 40.7128,
+    startLng: -74.0060,
+    endLat: 34.0522,
+    endLng: -118.2437,
+    arcAlt: 0.2,
+    color: "#ff0000", // red arc
+  },
+  // Add more data entries here
+];
+
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="bg-gray-900 text-white">
+      {/* Hero Section */}
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+{/* <BackgroundBeamsWithCollision className='p-0 m-0'> */}
+  {/* <BackgroundLines> */}
+      <section className="h-screen w-full flex items-center  justify-center bg-gradient-to-r">
+    <LampContainer>
+
+        <Container>
+
+          <motion.div
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="text-center"
           >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+            <h1 className="text-4xl md:text-6xl font-bold">
+              Welcome to <span className="text-yellow-300">WebTechSolutions</span>
+            </h1>
+            <p className="mt-4 text-lg md:text-xl text-gray-200">
+              Crafting Modern Apps, Websites, Logos, and More for Your Business.
+            </p>
+            <Button
+              className="mt-8"
+              size="large"
+              variant="primary"
+              onClick={() => window.scrollTo({ top: 600, behavior: 'smooth' })}
+            >
+              Explore Our Services
+            </Button>
+          </motion.div>
+        </Container>
+      </LampContainer>
+
+      </section>
+      {/* </BackgroundLines> */}
+      {/* </BackgroundBeamsWithCollision> */}
+
+      {/* Services Section */}
+      <section className="py-16 bg-gray-800">
+        <Container>
+          <h2 className="text-3xl md:text-4xl font-bold text-center">
+            Our <span className="text-blue-500">Services</span>
+          </h2>
+          <p className="text-gray-400 text-center mt-2">
+            Explore the wide range of services we provide to elevate your business.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+            {[
+              { title: 'App & Web Development', icon: 'code' },
+              { title: 'Logo Designing', icon: 'design_services' },
+              { title: 'Video Editing', icon: 'movie_creation' },
+              { title: 'Web3 Technologies', icon: 'language' },
+              { title: 'Script Writing', icon: 'edit' },
+              { title: 'Marketing Solutions', icon: 'trending_up' },
+            ].map((service, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+              >
+                <ThreeDCardDemo  />
+              </motion.div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Why Choose Us Section */}
+      {/* <section className="py-16 bg-gray-900">
+        <Container>
+          <h2 className="text-3xl md:text-4xl font-bold text-center">
+            Why <span className="text-yellow-300">Choose Us?</span>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+            <motion.div
+              initial={{ x: -50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.8 }}
+            >
+              <img
+                src="https://thumbs.dreamstime.com/z/vector-illustration-isolated-white-background-why-choose-us-web-button-why-choose-us-button-120724255.jpg"
+                alt="Why Choose Us"
+                height={200}
+                width={200}
+                className="hidden md:block rounded-lg shadow-lg"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ x: 100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              className="flex flex-col justify-center"
+            >
+              <ul className="space-y-4">
+                <li>
+                  Tailored solutions for all your business needs.
+                </li>
+                <li>
+                  Dedicated support and timely delivery.
+                </li>
+                <li>
+                  Industry experts in modern tech and design.
+                </li>
+              </ul>
+            </motion.div>
+          </div>
+        </Container>
+      </section> */}
+<BackgroundBeamsWithCollision className='p-0 m-0'>
+
+      <WhyChooseUs/>
+      </BackgroundBeamsWithCollision>
+  <BackgroundLines>
+
+<OurClients/>
+</BackgroundLines>
+<Testimonials/>
+      {/* Call to Action */}
+      {/* <section className="py-16 bg-blue-600 text-center">
+        <Container>
+          <h2 className="text-3xl font-bold">
+            Ready to Transform Your Business with <span className="text-yellow-300">WebTechSolutions</span>?
+          </h2>
+          <Button size="large" variant="light" className="mt-8">
+            Contact Us Today!
+          </Button>
+        </Container>
+      </section> */}
+      <ContactUs/>
+
+      {/* Footer */}
+      <footer className="py-6 bg-gray-800 text-center">
+        <p className="text-gray-400">&copy; 2024 WebTechSolutions. All rights reserved.</p>
       </footer>
     </div>
   );
