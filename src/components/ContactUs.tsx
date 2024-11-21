@@ -16,7 +16,7 @@ export default function ContactUs() {
             Get in <span className="text-blue-500">Touch</span>
           </h2>
           <p className="mt-4 text-lg text-gray-300">
-            We'd love to hear from you! Send us a message, and we'll get back to you as soon as possible.
+            We&apos;d love to hear from you! Send us a message, and we&apos;ll get back to you as soon as possible.
           </p>
         </motion.div>
 

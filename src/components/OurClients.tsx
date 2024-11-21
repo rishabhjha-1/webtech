@@ -25,7 +25,7 @@ export default function OurClients() {
             Our <span className="text-blue-500">Clients</span>
           </h2>
           <p className="mt-4 text-gray-600">
-            We are proud to work with some of the world's most recognizable
+            We are proud to work with some of the world&apos;s most recognizable
             brands and organizations.
           </p>
         </motion.div>

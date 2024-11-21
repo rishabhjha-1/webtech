@@ -103,7 +103,7 @@ export default function WhyChooseUs() {
             Why <span className="text-blue-500">Choose Us</span>
           </h2>
           <p className="mt-4 text-gray-600">
-            Discover what sets us apart and why we're the right choice for your
+            Discover what sets us apart and why we&apos;re the right choice for your
             needs.
           </p>
         </motion.div>
