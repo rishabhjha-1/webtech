@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import Button from '@/app/components/ui/Button';
 import {ThreeDCardDemo} from '@/app/components/ui/Card';
 import Container from '@/app/components/ui/Container'
-import {BackgroundBeamsWithCollision} from '@/app/components/ui/background';
+import {BackgroundBeamsWithCollision} from '@/app/components/ui/BackgroundCollision';
 import {BackgroundLines} from '@/app/components/ui/Backgroundlines';
 import {LampContainer} from '@/app/components/ui/LampEffect';
 import ContactUs from '@/components/ContactUs';
