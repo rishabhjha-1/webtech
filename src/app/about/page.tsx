@@ -36,7 +36,7 @@ export default function About() {
           <p className="text-gray-400 text-center mt-4 max-w-3xl mx-auto">
           CohortTech is a team of passionate developers, designers, and
             strategists dedicated to building exceptional apps, websites, and
-            digital experiences. Since our inception, we've focused on helping
+            digital experiences. Since our inception, we&apos;ve focused on helping
             businesses thrive in the ever-evolving digital landscape.
           </p>
         </Container>
