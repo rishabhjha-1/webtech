@@ -2,7 +2,6 @@
 import { motion } from 'framer-motion';
 import Button from '@/app/components/ui/Button';
 import {ThreeDCardDemo} from '@/app/components/ui/Card';
-import Icon  from '@/app/components/ui/Icon';
 import Container from '@/app/components/ui/Container'
 import {BackgroundBeamsWithCollision} from '@/app/components/ui/background';
 import {BackgroundLines} from '@/app/components/ui/Backgroundlines';
