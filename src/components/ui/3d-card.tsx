@@ -93,7 +93,6 @@ export const CardBody = ({
     </div>
   );
 };
-
 export const CardItem = ({
   as: Tag = "div",
   children,
@@ -115,7 +114,7 @@ export const CardItem = ({
   rotateX?: number | string;
   rotateY?: number | string;
   rotateZ?: number | string;
-  [key: string]: any;
+  [key: string]: number | string |React.ReactNode | React.ElementType;
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [isMouseEntered] = useMouseEnter();
