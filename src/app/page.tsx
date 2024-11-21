@@ -145,11 +145,11 @@ export default function Home() {
           </div>
         </Container>
       </section> */}
-<BackgroundBeamsWithCollision className='p-0 m-0'>
+<BackgroundBeamsWithCollision className='hidden md:block'>
 
       <WhyChooseUs/>
       </BackgroundBeamsWithCollision>
-  <BackgroundLines>
+  <BackgroundLines className='hidden md:block md:h-80'>
 
 <OurClients/>
 </BackgroundLines>
