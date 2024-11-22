@@ -6,7 +6,7 @@ export default function Testimonials() {
   const testimonials = [
     {
       name: "Prerna Sharma",
-      role: "CEO, Triscalla",
+      role: "CEO, Founder",
       text: "The team exceeded our expectations and delivered top-quality solutions. Highly recommend!",
       image: "/images/testimonial1.jpg",
     },

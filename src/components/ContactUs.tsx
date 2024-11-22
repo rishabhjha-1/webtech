@@ -109,7 +109,7 @@ export default function ContactUs() {
                 </div>
                 <div>
                   <h4 className="text-lg font-bold">Email Us</h4>
-                  <p className="text-gray-400">cohorttech@gmail.com</p>
+                  <p className="text-gray-400">cohortdigitech@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-center space-x-4">

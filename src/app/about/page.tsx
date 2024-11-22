@@ -17,7 +17,7 @@ export default function About() {
           >
             <h1 className="text-4xl md:text-6xl font-bold">
               About{" "}
-              <span className="text-yellow-300">CohortTech</span>
+              <span className="text-yellow-300">CohorDigiTech</span>
             </h1>
             <p className="mt-4 text-lg md:text-xl text-gray-300">
               Your trusted partner for crafting modern, innovative solutions for
@@ -34,7 +34,7 @@ export default function About() {
             Who We Are
           </h2>
           <p className="text-gray-400 text-center mt-4 max-w-3xl mx-auto">
-          CohortTech is a team of passionate developers, designers, and
+          CohorDigiTech is a team of passionate developers, designers, and
             strategists dedicated to building exceptional apps, websites, and
             digital experiences. Since our inception, we&apos;ve focused on helping
             businesses thrive in the ever-evolving digital landscape.
@@ -112,7 +112,7 @@ export default function About() {
       {/* Footer */}
       <footer className="py-6 bg-gray-800 text-center">
         <p className="text-gray-400">
-          &copy; 2024 CohortTech. All rights reserved.
+          &copy; 2024 CohorDigiTech. All rights reserved.
         </p>
       </footer>
     </div>
