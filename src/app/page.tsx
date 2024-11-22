@@ -69,7 +69,8 @@ export default function Home() {
             {[
   { 
     title: "App & Web Development", 
-    description: "Building modern and responsive apps and websites tailored to your needs." 
+    description: "Building modern and responsive apps and websites tailored to your needs." ,
+    image:"https://tse4.mm.bing.net/th?id=OIP.CRYxXYtIMgKAG-hKIh3ORQHaDe&pid=Api&P=0&h=180"
   },
   { 
     title: "Logo Designing", 
