@@ -105,22 +105,22 @@ export default function Home() {
   { 
     title: "Brand Strategy", 
     description: "Brans Strategic marketing to drive growth and brand visibility." ,
-    image:"https://files.oaiusercontent.com/file-LfqaqrMBF5EtwaoOyGBJn2uq?se=2024-11-22T04%3A14%3A49Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D90b9fea9-105c-420a-945a-6a5693a8a4d3.webp&sig=gya1hjmpC5GP4qR8xausmjWr2wBD5vFUFH9%2B3lx30pg%3D"
+    image:"https://tse2.mm.bing.net/th?id=OIP.1LikUcaSEVM68YqbygD5XgHaEV&pid=Api&P=0&h=180"
   },
   { 
     title: "CMS", 
     description: "CMS service provides seamless content management solutions, empowering businesses to create, edit, and manage digital content effortlessly." ,
-    image:"https://files.oaiusercontent.com/file-i0xRYvLEmOa47sJQDCPSpKxs?se=2024-11-22T04%3A15%3A31Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3De2325232-638e-4377-9cb9-9bf8f605f724.webp&sig=8aho0fv5Nxd%2BGEAuipv5pixSmtjCakWtdwuSTFQdXHI%3D"
+    image:"https://tse3.mm.bing.net/th?id=OIP.PNjjzHQBw3_UWmzMtaQWKwHaD4&pid=Api&P=0&h=180"
   },
   { 
     title: "Admin panel", 
     description: "An admin panel service provides a centralized dashboard for managing and monitoring key business operations, ensuring efficiency, control, and real-time insights." ,
-    image:"https://files.oaiusercontent.com/file-YG3TV5j7XJTfqSBU5ec04TZs?se=2024-11-22T04%3A17%3A39Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D5a707817-4496-4d86-abf7-d6ef9e7e5317.webp&sig=asBmb5Il6NfcMpp9reiVhOyep/0788/HaNYBzq5DW4w%3D"
+    image:"https://tse4.mm.bing.net/th?id=OIP.nBbszpWHsxStVm1nWEHK7QHaE8&pid=Api&P=0&h=180"
   },
   { 
     title: "Social Media", 
     description: "Social media services help businesses build a strong online presence, engage with their audience, and drive growth through tailored strategies and impactful content." ,
-    image:"https://files.oaiusercontent.com/file-LfqaqrMBF5EtwaoOyGBJn2uq?se=2024-11-22T04%3A14%3A49Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D90b9fea9-105c-420a-945a-6a5693a8a4d3.webp&sig=gya1hjmpC5GP4qR8xausmjWr2wBD5vFUFH9%2B3lx30pg%3D"
+    image:"https://tse2.mm.bing.net/th?id=OIP.Wg_2zWu1B_HwIKXiUcB2uQHaF7&pid=Api&P=0&h=180"
   },
 ]
 .map((service, idx) => (
