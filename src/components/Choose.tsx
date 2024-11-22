@@ -21,9 +21,10 @@ export default function WhyChooseUs() {
           />
         </svg>
       ),
-      title: "Expert Team",
+      title: "Affordable Pricing",
       description:
-        "Our team of experienced professionals ensures top-quality services tailored to your needs.",
+        "Our services offer the best value for your investment without compromising on quality.",
+     
     },
     {
       icon: (
@@ -42,9 +43,9 @@ export default function WhyChooseUs() {
           />
         </svg>
       ),
-      title: "Secure and Reliable",
+      title: "3 Months Free Support",
       description:
-        "We prioritize your data's security, delivering dependable solutions you can trust.",
+        "Post-delivery assistance to ensure smooth implementation.",
     },
     {
       icon: (
@@ -84,9 +85,9 @@ export default function WhyChooseUs() {
           />
         </svg>
       ),
-      title: "Affordable Pricing",
+      title: "Expert Team",
       description:
-        "Our services offer the best value for your investment without compromising on quality.",
+        "Expert-driven web and app development with custom CMS and admin panels Comprehensive creative services to elevate your brand visibility Customer-centric approach with tailored solutions for every need",
     },
   ];
 

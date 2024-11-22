@@ -17,7 +17,7 @@ export default function About() {
           >
             <h1 className="text-4xl md:text-6xl font-bold">
               About{" "}
-              <span className="text-yellow-300">CohorDigiTech</span>
+              <span className="text-yellow-300">CohortDigiTech</span>
             </h1>
             <p className="mt-4 text-lg md:text-xl text-gray-300">
               Your trusted partner for crafting modern, innovative solutions for
@@ -34,10 +34,9 @@ export default function About() {
             Who We Are
           </h2>
           <p className="text-gray-400 text-center mt-4 max-w-3xl mx-auto">
-          CohorDigiTech is a team of passionate developers, designers, and
-            strategists dedicated to building exceptional apps, websites, and
-            digital experiences. Since our inception, we&apos;ve focused on helping
-            businesses thrive in the ever-evolving digital landscape.
+          Welcome to CohortTech, a comprehensive technology and creative solutions company dedicated to empowering businesses in the digital age. We specialize in web and app development, offering custom CMS and admin panel solutions to streamline your operations and enhance user experiences.
+
+Our services extend beyond development—we also provide a range of creative offerings, including content writing, script writing, social media management, graphic designing, video editing, and SEO. Whether you&apos;re building a new platform or amplifying your brand&apos;s presence, CohortTech is your go-to partne
           </p>
         </Container>
       </section>
@@ -73,7 +72,7 @@ export default function About() {
       </section>
 
       {/* Meet the Team */}
-      {/* <section className="py-16 bg-gray-800">
+      <section className="py-16 bg-gray-800">
         <Container>
           <h2 className="text-3xl md:text-4xl font-bold text-center">
             Meet the <span className="text-yellow-300">Team</span>
@@ -81,11 +80,10 @@ export default function About() {
           <p className="text-gray-400 text-center mt-2">
             A blend of creativity, innovation, and technical expertise.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 mt-12">
             {[
-              { name: "John Doe", role: "CEO", image: "/team/john.jpg" },
-              { name: "Jane Smith", role: "CTO", image: "/team/jane.jpg" },
-              { name: "Emily White", role: "Lead Designer", image: "/team/emily.jpg" },
+              { name: "Rishabh Jha", role: "CoFounder", image: "/rj.png" },
+              { name: "Prerna Sharma", role: "CoFounder", image: "/ps.png" },
             ].map((member, idx) => (
               <motion.div
                 key={idx}
@@ -105,14 +103,14 @@ export default function About() {
             ))}
           </div>
         </Container>
-      </section> */}
+      </section>
 
      
 
       {/* Footer */}
       <footer className="py-6 bg-gray-800 text-center">
         <p className="text-gray-400">
-          &copy; 2024 CohorDigiTech. All rights reserved.
+          &copy; 2024 CohortDigiTech. All rights reserved.
         </p>
       </footer>
     </div>

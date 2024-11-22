@@ -28,12 +28,14 @@ export default function Home() {
       {/* <BackgroundLines> */}
       <section className="h-screen w-full flex items-center  justify-center bg-gradient-to-r">
         <LampContainer>
+        <img src="/logo-bg.png" className="absolute "/>
+
           <Container>
             <motion.div
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
-              className="text-center"
+              className="text-center mt-10"
             >
               <h1 className="text-4xl md:text-6xl font-bold">
                 Welcome to{" "}
@@ -43,18 +45,12 @@ export default function Home() {
                 Crafting Modern Apps, Websites, Logos, and More for Your
                 Business.
               </p>
-              <Button
-                className="mt-8"
-                size="large"
-                variant="primary"
-                onClick={scrollToServices
-                }
-              >
-                Explore Our Services
-              </Button>
+
+            
             </motion.div>
           </Container>
         </LampContainer>
+
       </section>
       {/* </BackgroundLines> */}
       {/* </BackgroundBeamsWithCollision> */}
