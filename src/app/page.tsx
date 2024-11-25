@@ -73,6 +73,21 @@ export default function Home() {
     image:"https://tse4.mm.bing.net/th?id=OIP.CRYxXYtIMgKAG-hKIh3ORQHaDe&pid=Api&P=0&h=180"
   },
   { 
+    title: "Web3 Technologies", 
+    description: "Innovative solutions in blockchain and decentralized tech." ,
+    image:"https://tse4.mm.bing.net/th?id=OIP.pkD2XAI-i8OtAmOPWWOm9AHaE8&pid=Api&P=0&h=180"
+  },
+  { 
+    title: "CMS", 
+    description: "CMS service provides seamless content management solutions, empowering businesses to create, edit, and manage digital content effortlessly." ,
+    image:"https://tse3.mm.bing.net/th?id=OIP.PNjjzHQBw3_UWmzMtaQWKwHaD4&pid=Api&P=0&h=180"
+  },
+  { 
+    title: "Admin panel", 
+    description: "An admin panel service provides a centralized dashboard for managing and monitoring key business operations, ensuring efficiency, control, and real-time insights." ,
+    image:"https://tse4.mm.bing.net/th?id=OIP.nBbszpWHsxStVm1nWEHK7QHaE8&pid=Api&P=0&h=180"
+  },
+  { 
     title: "Logo Designing", 
     description: "Crafting unique and memorable logos for your brand identity." ,
     image:
@@ -82,11 +97,7 @@ export default function Home() {
     description: "Professional video editing to bring your ideas to life." ,
     image:"https://tse1.mm.bing.net/th?id=OIP.iEhQM4VH2L4kPyBDd7OHpgHaEK&pid=Api&P=0&h=180"
   },
-  { 
-    title: "Web3 Technologies", 
-    description: "Innovative solutions in blockchain and decentralized tech." ,
-    image:"https://tse4.mm.bing.net/th?id=OIP.pkD2XAI-i8OtAmOPWWOm9AHaE8&pid=Api&P=0&h=180"
-  },
+ 
   { 
     title: "Script Writing", 
     description: "Creative scriptwriting to captivate your audience." ,
@@ -104,16 +115,7 @@ export default function Home() {
     description: "Brans Strategic marketing to drive growth and brand visibility." ,
     image:"https://tse2.mm.bing.net/th?id=OIP.1LikUcaSEVM68YqbygD5XgHaEV&pid=Api&P=0&h=180"
   },
-  { 
-    title: "CMS", 
-    description: "CMS service provides seamless content management solutions, empowering businesses to create, edit, and manage digital content effortlessly." ,
-    image:"https://tse3.mm.bing.net/th?id=OIP.PNjjzHQBw3_UWmzMtaQWKwHaD4&pid=Api&P=0&h=180"
-  },
-  { 
-    title: "Admin panel", 
-    description: "An admin panel service provides a centralized dashboard for managing and monitoring key business operations, ensuring efficiency, control, and real-time insights." ,
-    image:"https://tse4.mm.bing.net/th?id=OIP.nBbszpWHsxStVm1nWEHK7QHaE8&pid=Api&P=0&h=180"
-  },
+ 
   { 
     title: "Social Media", 
     description: "Social media services help businesses build a strong online presence, engage with their audience, and drive growth through tailored strategies and impactful content." ,
@@ -175,10 +177,10 @@ export default function Home() {
           </div>
         </Container>
       </section> */}
-      <BackgroundBeamsWithCollision className="hidden md:block">
+      <BackgroundBeamsWithCollision className=" md:block">
         <WhyChooseUs />
       </BackgroundBeamsWithCollision>
-      <BackgroundLines className="hidden md:block md:h-80">
+      <BackgroundLines className=" md:block md:h-80">
         <OurClients />
       </BackgroundLines>
       <Testimonials />
