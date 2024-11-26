@@ -34,7 +34,7 @@ export default function OurClients() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8"
+          className="md:grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 md:gap-8 gap-4 flex"
         >
           {clients.map((logo, index) => (
             <motion.div

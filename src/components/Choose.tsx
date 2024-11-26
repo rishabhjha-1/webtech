@@ -92,7 +92,7 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section className="bg-white py-16 px-4">
+    <section className="bg-white py-16 px-4  md:h-auto h-96 overflow-scroll">
       <div className="container mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -139,7 +139,7 @@ export default function WhyChooseUs() {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-center mt-16"
+          className="text-center mt-16 hidden md:block"
         >
           <h3 className="text-2xl font-bold text-gray-900">
             Ready to experience excellence?

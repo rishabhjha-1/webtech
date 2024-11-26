@@ -10,14 +10,13 @@ import ContactUs from "@/components/ContactUs";
 import WhyChooseUs from "@/components/Choose";
 import OurClients from "@/components/OurClients";
 import Testimonials from "@/components/Testimonials";
-import { useRef } from "react";
-
-
+import { useRef, useState } from "react";
 
 export default function Home() {
-  const servicesRef = useRef<HTMLDivElement | null>(null); 
+  const servicesRef = useRef<HTMLDivElement | null>(null);
+  const [showAllService, setShowAllService] = useState(false);
   const scrollToServices = () => {
-    console.log('dsf')
+    console.log("dsf");
     servicesRef.current?.scrollIntoView({ behavior: "smooth" });
   };
   return (
@@ -28,7 +27,7 @@ export default function Home() {
       {/* <BackgroundLines> */}
       <section className="h-screen w-full flex items-center  justify-center bg-gradient-to-r">
         <LampContainer>
-        <img src="/logo-bg.png" className="absolute "/>
+          <img src="/logo-bg.png" className="absolute md:top-0 top-12" />
 
           <Container>
             <motion.div
@@ -45,18 +44,15 @@ export default function Home() {
                 Crafting Modern Apps, Websites, Logos, and More for Your
                 Business.
               </p>
-
-            
             </motion.div>
           </Container>
         </LampContainer>
-
       </section>
       {/* </BackgroundLines> */}
       {/* </BackgroundBeamsWithCollision> */}
 
       {/* Services Section */}
-      <section  ref={servicesRef} className="py-16 bg-gray-800">
+      <section ref={servicesRef} className="py-16 bg-gray-800">
         <Container>
           <h2 className="text-3xl md:text-4xl font-bold text-center">
             Our <span className="text-blue-500">Services</span>
@@ -67,72 +63,105 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             {[
-  { 
-    title: "App & Web Development", 
-    description: "Building modern and responsive apps and websites tailored to your needs." ,
-    image:"https://tse4.mm.bing.net/th?id=OIP.CRYxXYtIMgKAG-hKIh3ORQHaDe&pid=Api&P=0&h=180"
-  },
-  { 
-    title: "Web3 Technologies", 
-    description: "Innovative solutions in blockchain and decentralized tech." ,
-    image:"https://tse4.mm.bing.net/th?id=OIP.pkD2XAI-i8OtAmOPWWOm9AHaE8&pid=Api&P=0&h=180"
-  },
-  { 
-    title: "CMS", 
-    description: "CMS service provides seamless content management solutions, empowering businesses to create, edit, and manage digital content effortlessly." ,
-    image:"https://tse3.mm.bing.net/th?id=OIP.PNjjzHQBw3_UWmzMtaQWKwHaD4&pid=Api&P=0&h=180"
-  },
-  { 
-    title: "Admin panel", 
-    description: "An admin panel service provides a centralized dashboard for managing and monitoring key business operations, ensuring efficiency, control, and real-time insights." ,
-    image:"https://tse4.mm.bing.net/th?id=OIP.nBbszpWHsxStVm1nWEHK7QHaE8&pid=Api&P=0&h=180"
-  },
-  { 
-    title: "Logo Designing", 
-    description: "Crafting unique and memorable logos for your brand identity." ,
-    image:
-'https://tse3.mm.bing.net/th?id=OIP.fFWL6w75QwbvSxxwk3cyxwHaE_&pid=Api&P=0&h=180'  },
-  { 
-    title: "Video Editing", 
-    description: "Professional video editing to bring your ideas to life." ,
-    image:"https://tse1.mm.bing.net/th?id=OIP.iEhQM4VH2L4kPyBDd7OHpgHaEK&pid=Api&P=0&h=180"
-  },
- 
-  { 
-    title: "Script Writing", 
-    description: "Creative scriptwriting to captivate your audience." ,
-    image:"https://tse3.mm.bing.net/th?id=OIP.s27ty9CO_KG1IqxXRajtkQHaDt&pid=Api&P=0&h=180"
-  },
- 
-  { 
-    title: "SEO", 
-    description: "Strategic SEO marketing to drive growth and brand visibility." ,
-    image:"https://tse2.mm.bing.net/th?id=OIP.NwOQUOzNcsvZCr9zGodfIwHaE8&pid=Api&P=0&h=180",
-    
-  },
-  { 
-    title: "Brand Strategy", 
-    description: "Brans Strategic marketing to drive growth and brand visibility." ,
-    image:"https://tse2.mm.bing.net/th?id=OIP.1LikUcaSEVM68YqbygD5XgHaEV&pid=Api&P=0&h=180"
-  },
- 
-  { 
-    title: "Social Media", 
-    description: "Social media services help businesses build a strong online presence, engage with their audience, and drive growth through tailored strategies and impactful content." ,
-    image:"https://tse2.mm.bing.net/th?id=OIP.Wg_2zWu1B_HwIKXiUcB2uQHaF7&pid=Api&P=0&h=180"
-  },
-]
-.map((service, idx) => (
+              {
+                title: "App & Web Development",
+                description:
+                  "Building modern and responsive apps and websites tailored to your needs.",
+                image:
+                  "https://tse4.mm.bing.net/th?id=OIP.CRYxXYtIMgKAG-hKIh3ORQHaDe&pid=Api&P=0&h=180",
+              },
+              {
+                title: "Web3 Technologies",
+                description:
+                  "Innovative solutions in blockchain and decentralized tech.",
+                image:
+                  "https://tse4.mm.bing.net/th?id=OIP.pkD2XAI-i8OtAmOPWWOm9AHaE8&pid=Api&P=0&h=180",
+              },
+              {
+                title: "CMS",
+                description:
+                  "CMS service provides seamless content management solutions, empowering businesses to create, edit, and manage digital content effortlessly.",
+                image:
+                  "https://tse3.mm.bing.net/th?id=OIP.PNjjzHQBw3_UWmzMtaQWKwHaD4&pid=Api&P=0&h=180",
+              },
+              {
+                title: "Admin panel",
+                description:
+                  "An admin panel service provides a centralized dashboard for managing and monitoring key business operations, ensuring efficiency, control, and real-time insights.",
+                image:
+                  "https://tse4.mm.bing.net/th?id=OIP.nBbszpWHsxStVm1nWEHK7QHaE8&pid=Api&P=0&h=180",
+              },
+              {
+                title: "Logo Designing",
+                description:
+                  "Crafting unique and memorable logos for your brand identity.",
+                image:
+                  "https://tse3.mm.bing.net/th?id=OIP.fFWL6w75QwbvSxxwk3cyxwHaE_&pid=Api&P=0&h=180",
+              },
+              {
+                title: "Video Editing",
+                description:
+                  "Professional video editing to bring your ideas to life.",
+                image:
+                  "https://tse1.mm.bing.net/th?id=OIP.iEhQM4VH2L4kPyBDd7OHpgHaEK&pid=Api&P=0&h=180",
+              },
+
+              {
+                title: "Script Writing",
+                description:
+                  "Creative scriptwriting to captivate your audience.",
+                image:
+                  "https://tse3.mm.bing.net/th?id=OIP.s27ty9CO_KG1IqxXRajtkQHaDt&pid=Api&P=0&h=180",
+              },
+
+              {
+                title: "SEO",
+                description:
+                  "Strategic SEO marketing to drive growth and brand visibility.",
+                image:
+                  "https://tse2.mm.bing.net/th?id=OIP.NwOQUOzNcsvZCr9zGodfIwHaE8&pid=Api&P=0&h=180",
+              },
+              {
+                title: "Brand Strategy",
+                description:
+                  "Brans Strategic marketing to drive growth and brand visibility.",
+                image:
+                  "https://tse2.mm.bing.net/th?id=OIP.1LikUcaSEVM68YqbygD5XgHaEV&pid=Api&P=0&h=180",
+              },
+
+              {
+                title: "Social Media",
+                description:
+                  "Social media services help businesses build a strong online presence, engage with their audience, and drive growth through tailored strategies and impactful content.",
+                image:
+                  "https://tse2.mm.bing.net/th?id=OIP.Wg_2zWu1B_HwIKXiUcB2uQHaF7&pid=Api&P=0&h=180",
+              },
+            ].slice(0, showAllService || window.innerWidth >= 768 ? 10 : 4).map((service, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
               >
-                <ThreeDCardDemo  title={service.title}  desc={service.description} src={service.image}/>
+                <ThreeDCardDemo
+                  title={service.title}
+                  desc={service.description}
+                  src={service.image}
+                />
               </motion.div>
             ))}
           </div>
+          <div className="flex justify-center">
+          {window.innerWidth < 768 && !showAllService && (
+        <button
+          className="show-more-btn bg-blue-500 text-white px-4 py-2 rounded mt-2 "
+          onClick={() => setShowAllService(true)}
+        >
+          Show More
+        </button>
+      )}
+        </div>
+
         </Container>
       </section>
 
@@ -177,13 +206,15 @@ export default function Home() {
           </div>
         </Container>
       </section> */}
-      <BackgroundBeamsWithCollision className=" md:block">
-        <WhyChooseUs />
-      </BackgroundBeamsWithCollision>
-      <BackgroundLines className=" md:block md:h-80">
-        <OurClients />
-      </BackgroundLines>
-      <Testimonials />
+      <div className="flex flex-col">
+        <BackgroundBeamsWithCollision className=" md:block ">
+          <WhyChooseUs />
+        </BackgroundBeamsWithCollision>
+        <BackgroundLines className=" md:block md:h-80">
+          <OurClients />
+        </BackgroundLines>
+        <Testimonials />
+      </div>
       {/* Call to Action */}
       {/* <section className="py-16 bg-blue-600 text-center">
         <Container>
