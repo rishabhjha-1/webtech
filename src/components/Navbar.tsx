@@ -10,6 +10,8 @@ export default function Navbar() {
   const menuItems = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
+    { name: "Whatapp Us",  href:"https://wa.me/8851840604" },
+
    
   ];
 

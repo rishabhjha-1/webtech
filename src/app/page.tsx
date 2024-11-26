@@ -40,7 +40,10 @@ export default function Home() {
       {/* Hero Section */}
       <section className="h-screen w-full flex items-center justify-center bg-gradient-to-r">
         <LampContainer>
-          <img src="/logo-bg.png" className="absolute md:top-0 top-12" />
+          <img src="/logo-bg.png" className="absolute md:top-2 top-12" />
+          <a href="tel:8851840604"className="absolute top-96">
+          <Button >Call Us</Button>
+          </a>
           <Container>
             <motion.div
               initial={{ opacity: 0, y: -50 }}
@@ -58,6 +61,7 @@ export default function Home() {
           </Container>
         </LampContainer>
       </section>
+      <ContactUs />
 
       {/* Services Section */}
       <section ref={servicesRef} className="py-16 bg-gray-800">
@@ -178,7 +182,6 @@ export default function Home() {
       </div>
 
       {/* Contact Us */}
-      <ContactUs />
 
       {/* Footer */}
       <footer className="py-6 bg-gray-800 text-center">
