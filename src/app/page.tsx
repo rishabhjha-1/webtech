@@ -10,25 +10,37 @@ import ContactUs from "@/components/ContactUs";
 import WhyChooseUs from "@/components/Choose";
 import OurClients from "@/components/OurClients";
 import Testimonials from "@/components/Testimonials";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
 export default function Home() {
   const servicesRef = useRef<HTMLDivElement | null>(null);
   const [showAllService, setShowAllService] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Check screen size on the client side
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Run on mount
+    checkIsMobile();
+
+    // Update on resize
+    window.addEventListener("resize", checkIsMobile);
+    return () => window.removeEventListener("resize", checkIsMobile);
+  }, []);
+
   const scrollToServices = () => {
-    console.log("dsf");
     servicesRef.current?.scrollIntoView({ behavior: "smooth" });
   };
+
   return (
     <div className="bg-gray-900 text-white">
       {/* Hero Section */}
-
-      {/* <BackgroundBeamsWithCollision className='p-0 m-0'> */}
-      {/* <BackgroundLines> */}
-      <section className="h-screen w-full flex items-center  justify-center bg-gradient-to-r">
+      <section className="h-screen w-full flex items-center justify-center bg-gradient-to-r">
         <LampContainer>
           <img src="/logo-bg.png" className="absolute md:top-0 top-12" />
-
           <Container>
             <motion.div
               initial={{ opacity: 0, y: -50 }}
@@ -37,19 +49,15 @@ export default function Home() {
               className="text-center mt-10"
             >
               <h1 className="text-4xl md:text-6xl font-bold">
-                Welcome to{" "}
-                <span className="text-yellow-300">CohorDigiTech</span>
+                Welcome to <span className="text-yellow-300">CohorDigiTech</span>
               </h1>
               <p className="mt-4 text-lg md:text-xl text-gray-200">
-                Crafting Modern Apps, Websites, Logos, and More for Your
-                Business.
+                Crafting Modern Apps, Websites, Logos, and More for Your Business.
               </p>
             </motion.div>
           </Container>
         </LampContainer>
       </section>
-      {/* </BackgroundLines> */}
-      {/* </BackgroundBeamsWithCollision> */}
 
       {/* Services Section */}
       <section ref={servicesRef} className="py-16 bg-gray-800">
@@ -58,8 +66,7 @@ export default function Home() {
             Our <span className="text-blue-500">Services</span>
           </h2>
           <p className="text-gray-400 text-center mt-2">
-            Explore the wide range of services we provide to elevate your
-            business.
+            Explore the wide range of services we provide to elevate your business.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             {[
@@ -72,8 +79,7 @@ export default function Home() {
               },
               {
                 title: "Web3 Technologies",
-                description:
-                  "Innovative solutions in blockchain and decentralized tech.",
+                description: "Innovative solutions in blockchain and decentralized tech.",
                 image:
                   "https://tse4.mm.bing.net/th?id=OIP.pkD2XAI-i8OtAmOPWWOm9AHaE8&pid=Api&P=0&h=180",
               },
@@ -93,27 +99,22 @@ export default function Home() {
               },
               {
                 title: "Logo Designing",
-                description:
-                  "Crafting unique and memorable logos for your brand identity.",
+                description: "Crafting unique and memorable logos for your brand identity.",
                 image:
                   "https://tse3.mm.bing.net/th?id=OIP.fFWL6w75QwbvSxxwk3cyxwHaE_&pid=Api&P=0&h=180",
               },
               {
                 title: "Video Editing",
-                description:
-                  "Professional video editing to bring your ideas to life.",
+                description: "Professional video editing to bring your ideas to life.",
                 image:
                   "https://tse1.mm.bing.net/th?id=OIP.iEhQM4VH2L4kPyBDd7OHpgHaEK&pid=Api&P=0&h=180",
               },
-
               {
                 title: "Script Writing",
-                description:
-                  "Creative scriptwriting to captivate your audience.",
+                description: "Creative scriptwriting to captivate your audience.",
                 image:
                   "https://tse3.mm.bing.net/th?id=OIP.s27ty9CO_KG1IqxXRajtkQHaDt&pid=Api&P=0&h=180",
               },
-
               {
                 title: "SEO",
                 description:
@@ -128,7 +129,6 @@ export default function Home() {
                 image:
                   "https://tse2.mm.bing.net/th?id=OIP.1LikUcaSEVM68YqbygD5XgHaEV&pid=Api&P=0&h=180",
               },
-
               {
                 title: "Social Media",
                 description:
@@ -136,96 +136,48 @@ export default function Home() {
                 image:
                   "https://tse2.mm.bing.net/th?id=OIP.Wg_2zWu1B_HwIKXiUcB2uQHaF7&pid=Api&P=0&h=180",
               },
-            ].slice(0, showAllService || window.innerWidth >= 768 ? 10 : 4).map((service, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-              >
-                <ThreeDCardDemo
-                  title={service.title}
-                  desc={service.description}
-                  src={service.image}
-                />
-              </motion.div>
-            ))}
+            ]
+              .slice(0, showAllService || !isMobile ? 10 : 4)
+              .map((service, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                >
+                  <ThreeDCardDemo
+                    title={service.title}
+                    desc={service.description}
+                    src={service.image}
+                  />
+                </motion.div>
+              ))}
           </div>
           <div className="flex justify-center">
-          {window.innerWidth < 768 && !showAllService && (
-        <button
-          className="show-more-btn bg-blue-500 text-white px-4 py-2 rounded mt-2 "
-          onClick={() => setShowAllService(true)}
-        >
-          Show More
-        </button>
-      )}
-        </div>
-
+            {isMobile && !showAllService && (
+              <button
+                className="show-more-btn bg-blue-500 text-white px-4 py-2 rounded mt-2"
+                onClick={() => setShowAllService(true)}
+              >
+                Show More
+              </button>
+            )}
+          </div>
         </Container>
       </section>
 
-      {/* Why Choose Us Section */}
-      {/* <section className="py-16 bg-gray-900">
-        <Container>
-          <h2 className="text-3xl md:text-4xl font-bold text-center">
-            Why <span className="text-yellow-300">Choose Us?</span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-            <motion.div
-              initial={{ x: -50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8 }}
-            >
-              <img
-                src="https://thumbs.dreamstime.com/z/vector-illustration-isolated-white-background-why-choose-us-web-button-why-choose-us-button-120724255.jpg"
-                alt="Why Choose Us"
-                height={200}
-                width={200}
-                className="hidden md:block rounded-lg shadow-lg"
-              />
-            </motion.div>
-            <motion.div
-              initial={{ x: 100, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8 }}
-              className="flex flex-col justify-center"
-            >
-              <ul className="space-y-4">
-                <li>
-                  Tailored solutions for all your business needs.
-                </li>
-                <li>
-                  Dedicated support and timely delivery.
-                </li>
-                <li>
-                  Industry experts in modern tech and design.
-                </li>
-              </ul>
-            </motion.div>
-          </div>
-        </Container>
-      </section> */}
+      {/* Other Sections */}
       <div className="flex flex-col">
-        <BackgroundBeamsWithCollision className=" md:block ">
+        <BackgroundBeamsWithCollision className="md:block">
           <WhyChooseUs />
         </BackgroundBeamsWithCollision>
-        <BackgroundLines className=" md:block md:h-80">
+        <BackgroundLines className="md:block md:h-80">
           <OurClients />
         </BackgroundLines>
         <Testimonials />
       </div>
-      {/* Call to Action */}
-      {/* <section className="py-16 bg-blue-600 text-center">
-        <Container>
-          <h2 className="text-3xl font-bold">
-            Ready to Transform Your Business with <span className="text-yellow-300">WebTechSolutions</span>?
-          </h2>
-          <Button size="large" variant="light" className="mt-8">
-            Contact Us Today!
-          </Button>
-        </Container>
-      </section> */}
+
+      {/* Contact Us */}
       <ContactUs />
 
       {/* Footer */}
