@@ -9,6 +9,8 @@ interface FormData {
   fullName: string;
   email: string;
   message: string;
+  service: string;
+  budget: string;
 }
 
 export default function ContactUs() {
@@ -16,6 +18,8 @@ export default function ContactUs() {
     fullName: "",
     email: "",
     message: "",
+    service:"",
+    budget:""
   });
 
   const [isLoading, setIsLoading] = useState(false); // Track loading state
@@ -43,7 +47,7 @@ export default function ContactUs() {
       const res = await axios.post("/api/contact", formState);
       console.log(res);
       setSuccess("Your message has been sent successfully!");
-      setFormState({ fullName: "", email: "", message: "" }); // Reset form on success
+      setFormState({ fullName: "", email: "", message: "" , budget: "" , service: "" }); // Reset form on success
     } catch (error: any) {
       console.error(error);
       setError("Something went wrong. Please try again.");
@@ -111,6 +115,38 @@ export default function ContactUs() {
                   value={formState.email}
                   onChange={handleChange}
                 />
+              </div>
+              <select
+    id="budget"
+    name="budget"
+    className="w-full mt-2 px-4 py-2 bg-gray-700 text-white rounded-lg focus:ring-2 focus:ring-blue-500"
+    value={formState.budget}
+    //@ts-ignore
+    onChange={handleChange}
+  >
+    <option value="" disabled>
+      Select your budget
+    </option>
+    <option value="10000-15000">₹10,000 - ₹15,000</option>
+    <option value="15000-20000">₹15,000 - ₹20,000</option>
+    <option value="20000-30000">₹20,000 - ₹30,000</option>
+  </select>
+              <div className="mb-4">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-400"
+                >
+                  Service
+                </label>
+                <textarea
+                  id="service"
+                  name="service"
+                  className="w-full mt-2 px-4 py-2 bg-gray-700 text-white rounded-lg focus:ring-2 focus:ring-blue-500"
+                  rows={5}
+                  placeholder="Service"
+                  value={formState.service}
+                  onChange={handleChange}
+                ></textarea>
               </div>
 
               <div className="mb-4">

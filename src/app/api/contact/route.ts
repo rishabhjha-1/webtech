@@ -6,16 +6,18 @@ interface ContactMessage {
   email: string;
   message: string;
   createdAt: Date;
+  budget: string;
+  service: Date;
 }
 
 export async function POST(request: Request) {
   try {
     const body: ContactMessage = await request.json();
 
-    const { fullName, email, message } = body;
+    const { fullName, email, message,budget,service } = body;
 
     // Validate input
-    if (!fullName || !email || !message) {
+    if (!fullName || !email || !message || !budget || !service) {
       return NextResponse.json(
         { error: 'All fields are required.' },
         { status: 400 }
@@ -30,6 +32,8 @@ export async function POST(request: Request) {
         fullName,
       email,
       message,
+      service,
+      budget,
       createdAt: new Date(),
     });
 
