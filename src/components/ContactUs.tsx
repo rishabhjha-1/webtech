@@ -119,7 +119,7 @@ export default function ContactUs() {
               <select
     id="budget"
     name="budget"
-    className="w-full mt-2 px-4 py-2 bg-gray-700 text-white rounded-lg focus:ring-2 focus:ring-blue-500"
+    className="w-full mt-2 mb-2 px-4 py-2 bg-gray-700 text-white rounded-lg focus:ring-2 focus:ring-blue-500"
     value={formState.budget}
     //@ts-ignore
     onChange={handleChange}

@@ -41,9 +41,7 @@ export default function Home() {
       <section className="h-screen w-full flex items-center justify-center bg-gradient-to-r">
         <LampContainer>
           <img src="/logo-bg.png" className="absolute md:top-2 top-12" />
-          <a href="tel:8851840604"className="absolute top-96">
-          <Button >Call Us</Button>
-          </a>
+   
           <Container>
             <motion.div
               initial={{ opacity: 0, y: -50 }}
@@ -60,6 +58,9 @@ export default function Home() {
             </motion.div>
           </Container>
         </LampContainer>
+        <a href="tel:8851840604" className="absolute bottom-8 z-50 cursor-pointer">
+  <Button>Call Us</Button>
+</a>
       </section>
       <ContactUs />
 
