@@ -126,7 +126,7 @@ export default function Home() {
                 title: "Video Editing",
                 description:
                   "Professional video editing to bring your creative ideas to life.",
-                image: "videoediting.jpg",
+                image: "videoediting2.jpg",
               },
               {
                 title: "Script Writing",
