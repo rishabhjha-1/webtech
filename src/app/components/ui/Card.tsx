@@ -32,7 +32,7 @@ export function ThreeDCardDemo({ title, desc, src }: { title: string, desc: stri
   return (
     <div>
       {isModalOpen && (
-        <div className=" inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50  relative">
+        <div className=" inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50  relative ">
           <div className="bg-white p-8 rounded-lg w-96">
             <h3 className="text-2xl font-semibold mb-4">Enter your mobile number</h3>
             <input

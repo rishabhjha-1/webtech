@@ -41,7 +41,7 @@ export default function Home() {
       <section className="h-screen w-full flex items-center justify-center bg-gradient-to-r">
         <LampContainer>
           <img src="/logo-bg.png" className="absolute md:top-2 top-12" />
-   
+
           <Container>
             <motion.div
               initial={{ opacity: 0, y: -50 }}
@@ -50,17 +50,33 @@ export default function Home() {
               className="text-center mt-10"
             >
               <h1 className="text-4xl md:text-6xl font-bold">
-                Welcome to <span className="text-yellow-300">CohorDigiTech</span>
+                Welcome to{" "}
+                <span className="text-yellow-300">CohorDigiTech</span>
               </h1>
               <p className="mt-4 text-lg md:text-xl text-gray-200">
-                Crafting Modern Apps, Websites, Logos, and More for Your Business.
+                Crafting Modern Apps, Websites, Logos, and More for Your
+                Business.
               </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.2, delay: 0.5 }}
+              className="absolute text-center mt-44"
+            >
+              <h2 className="text-2xl md:text-3xl font-semibold text-gray-200 md:ml-44 mt-28">
+                Trusted by <span className="text-blue-400">50+ Brands</span> Worldwide
+              </h2>
+             
             </motion.div>
           </Container>
         </LampContainer>
-        <a href="tel:8851840604" className="absolute bottom-8 z-50 cursor-pointer">
-  <Button>Call Us</Button>
-</a>
+        <a
+          href="tel:8851840604"
+          className="absolute bottom-8 z-50 cursor-pointer"
+        >
+          <Button>Call Us</Button>
+        </a>
       </section>
       <ContactUs />
 
@@ -71,73 +87,72 @@ export default function Home() {
             Our <span className="text-blue-500">Services</span>
           </h2>
           <p className="text-gray-400 text-center mt-2">
-            Explore the wide range of services we provide to elevate your business.
+            Explore the wide range of services we provide to elevate your
+            business.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             {[
               {
                 title: "App & Web Development",
                 description:
-                  "Building modern and responsive apps and websites tailored to your needs.",
-                image:
-                  "https://tse4.mm.bing.net/th?id=OIP.CRYxXYtIMgKAG-hKIh3ORQHaDe&pid=Api&P=0&h=180",
+                  "Modern and responsive apps and websites tailored to your unique needs.",
+                image: "/appweb.png",
               },
               {
                 title: "Web3 Technologies",
-                description: "Innovative solutions in blockchain and decentralized tech.",
-                image:
-                  "https://tse4.mm.bing.net/th?id=OIP.pkD2XAI-i8OtAmOPWWOm9AHaE8&pid=Api&P=0&h=180",
+                description:
+                  "Innovative blockchain and decentralized technology solutions.",
+                image: "web3.jpg",
               },
               {
                 title: "CMS",
                 description:
-                  "CMS service provides seamless content management solutions, empowering businesses to create, edit, and manage digital content effortlessly.",
-                image:
-                  "https://tse3.mm.bing.net/th?id=OIP.PNjjzHQBw3_UWmzMtaQWKwHaD4&pid=Api&P=0&h=180",
+                  "Effortless content management solutions to empower your business.",
+                image: "/cms.webp",
               },
               {
-                title: "Admin panel",
+                title: "Admin Panel",
                 description:
-                  "An admin panel service provides a centralized dashboard for managing and monitoring key business operations, ensuring efficiency, control, and real-time insights.",
-                image:
-                  "https://tse4.mm.bing.net/th?id=OIP.nBbszpWHsxStVm1nWEHK7QHaE8&pid=Api&P=0&h=180",
+                  "Centralized dashboards for managing business operations efficiently.",
+                image: "/adminpanel.png",
               },
               {
                 title: "Logo Designing",
-                description: "Crafting unique and memorable logos for your brand identity.",
-                image:
-                  "https://tse3.mm.bing.net/th?id=OIP.fFWL6w75QwbvSxxwk3cyxwHaE_&pid=Api&P=0&h=180",
+                description:
+                  "Unique and memorable logos crafted for strong brand identity.",
+                image: "/logodesign.png",
               },
               {
                 title: "Video Editing",
-                description: "Professional video editing to bring your ideas to life.",
-                image:
-                  "https://tse1.mm.bing.net/th?id=OIP.iEhQM4VH2L4kPyBDd7OHpgHaEK&pid=Api&P=0&h=180",
+                description:
+                  "Professional video editing to bring your creative ideas to life.",
+                image: "videoediting.jpg",
               },
               {
                 title: "Script Writing",
-                description: "Creative scriptwriting to captivate your audience.",
+                description:
+                  "Captivating scripts designed to engage and entertain your audience.",
                 image:
                   "https://tse3.mm.bing.net/th?id=OIP.s27ty9CO_KG1IqxXRajtkQHaDt&pid=Api&P=0&h=180",
               },
               {
                 title: "SEO",
                 description:
-                  "Strategic SEO marketing to drive growth and brand visibility.",
+                  "Strategic SEO to boost growth, visibility, and audience engagement.",
                 image:
                   "https://tse2.mm.bing.net/th?id=OIP.NwOQUOzNcsvZCr9zGodfIwHaE8&pid=Api&P=0&h=180",
               },
               {
                 title: "Brand Strategy",
                 description:
-                  "Brans Strategic marketing to drive growth and brand visibility.",
+                  "Comprehensive strategies to enhance and grow your brand identity.",
                 image:
                   "https://tse2.mm.bing.net/th?id=OIP.1LikUcaSEVM68YqbygD5XgHaEV&pid=Api&P=0&h=180",
               },
               {
                 title: "Social Media",
                 description:
-                  "Social media services help businesses build a strong online presence, engage with their audience, and drive growth through tailored strategies and impactful content.",
+                  "Tailored strategies to build presence, engage, and drive business growth.",
                 image:
                   "https://tse2.mm.bing.net/th?id=OIP.Wg_2zWu1B_HwIKXiUcB2uQHaF7&pid=Api&P=0&h=180",
               },
