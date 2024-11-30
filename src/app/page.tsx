@@ -133,28 +133,28 @@ export default function Home() {
                 description:
                   "Captivating scripts designed to engage and entertain your audience.",
                 image:
-                  "https://tse3.mm.bing.net/th?id=OIP.s27ty9CO_KG1IqxXRajtkQHaDt&pid=Api&P=0&h=180",
+                  "/script.png",
               },
               {
                 title: "SEO",
                 description:
                   "Strategic SEO to boost growth, visibility, and audience engagement.",
                 image:
-                  "https://tse2.mm.bing.net/th?id=OIP.NwOQUOzNcsvZCr9zGodfIwHaE8&pid=Api&P=0&h=180",
+                  "/seo.png",
               },
               {
                 title: "Brand Strategy",
                 description:
                   "Comprehensive strategies to enhance and grow your brand identity.",
                 image:
-                  "https://tse2.mm.bing.net/th?id=OIP.1LikUcaSEVM68YqbygD5XgHaEV&pid=Api&P=0&h=180",
+                  "/brand.png",
               },
               {
                 title: "Social Media",
                 description:
                   "Tailored strategies to build presence, engage, and drive business growth.",
                 image:
-                  "https://tse2.mm.bing.net/th?id=OIP.Wg_2zWu1B_HwIKXiUcB2uQHaF7&pid=Api&P=0&h=180",
+                  "/social.png",
               },
             ]
               .slice(0, showAllService || !isMobile ? 10 : 4)
